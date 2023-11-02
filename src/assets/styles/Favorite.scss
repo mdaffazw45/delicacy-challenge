@@ -1,0 +1,54 @@
+.konten-utama-favorite {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  // Allows the boxes to wrap to the next row
+    min-height: 100vh;
+    width: 100vw;
+    background-color: white;
+    justify-content: flex-start;
+    padding: 20px; // Adds some padding around the boxes
+    gap: 20px; // Adds space between the boxes
+}
+
+.meal-box {
+    margin-top: 100px;
+    width: 200px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.meal-name {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.meal-trash {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336; // Red color
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #d32f2f; // Darken on hover
+    }
+}

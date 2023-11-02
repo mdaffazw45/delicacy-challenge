@@ -1,0 +1,145 @@
+
+.kartu-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll; 
+    width: 90%;
+    white-space: nowrap;
+    margin-top: 120px;
+    margin-bottom: 170px;
+    scroll-padding-left: 0%;  // This assumes the .kartu-wrapper takes up 100% of the viewport's width.
+
+}
+
+.kartu-utama-detail {
+    width: 50vw;  // Adjust the width as needed
+    height: 60vh; // Adjust the height as needed
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);    position: relative; // Make sure kartu-utama has a position other than static
+    z-index: 2; // Higher z-index to ensure it's in front
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    margin-top:200px;
+    margin-left: 300px;
+    border-radius: 20px;
+    flex-direction: row;
+    flex-shrink: 0; // Ensures the cards don't shrink in size when there's overflow
+}
+
+.tulisan-utama {
+    width: 50%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 100%; /* takes up the full height of its parent */
+    position: absolute; /* absolute positioning */
+    left: 0%; /* centers the child div */
+    display: flex;  /* Add this */
+    align-items: center; /* Vertically center children */
+    justify-content: center; /* Horizontally center children */
+    flex-direction: column;
+}
+
+.meal-title {
+    position: absolute;  /* Change from absolute to relative */
+    margin-top: -350px; /* Adjust this value as needed */
+    margin-left: -120px; /* Add some left margin to push it away from the edge */
+    z-index: 2; 
+
+    h1 {
+        margin: 0; 
+        color: black; 
+        padding: 10px; 
+        font-size: 18px;
+        border-radius: 5px; 
+        font-family: 'Manrope', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+    }
+}
+
+
+.image-utama {
+    // flex: 1;  
+    width: 400px;  /* Adjusted to take 90% of its parent's width */
+    height: 400px; /* Let it adjust automatically to maintain aspect ratio */
+    z-index: 1;
+    margin-left: 530px;
+}
+
+.footer-page {
+    width: 100vw;
+    height: 190px; // Adjust the height as needed
+    // background-color: #ea6401;
+    position: absolute; // Position the footer absolutely
+    bottom: 0; // Position it at the bottom of the .konten-utama-page div
+    z-index: 1; // This ensures the footer is in front of other sibling elements
+    display: flex;
+    flex-direction: row;
+    font-family: 'Manrope', sans-serif; /* Choose your desired font */
+    flex-wrap: wrap; /* If you want to wrap to the next line if they don't fit in one row */
+    justify-content: space-between; /* This will spread the boxes evenly */
+}
+
+.meal-instructions {
+    position: absolute;  /* Change from absolute to relative */
+    margin-top: -160px; /* Adjust this value based on your layout needs */
+    margin-left: 10px;  /* Add some left margin to push it away from the edge */
+    // margin-right: 10px; /* Add some right margin to give it space on the right side */
+    z-index: 2; 
+    font-family: 'Manrope', sans-serif; /* Choose your desired font */
+    font-size: 10px; /* Adjust size as necessary */
+    color: black; /* Font color is red as per your request */
+    // max-height: calc(100% - 20px); /* Adjust to ensure the text stays inside the `tulisan-utama` div, considering the added margin */
+    height: 170px;
+    width: 300px;
+    overflow-y: scroll;  // Add this line
+    white-space: pre-wrap; /* Ensures the text wraps and respects newlines and spaces */
+    line-height: 1.5; /* Adjusts spacing between lines for better readability */
+}
+
+
+.ingredients {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-top: 100px;
+    margin-bottom: -120px;
+}
+
+.ingredients-kiri, .ingredients-kanan {
+    display: flex;
+    font-family: 'Manrope', sans-serif; /* Choose your desired font */
+    align-items: center;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.ingredients-kiri img, .ingredients-kanan img {
+    margin-right: 5px;
+}
+
+
+.tombol-bawah {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;  /* Space between the buttons */
+    align-self: flex-start;  /* Aligns the buttons to the start, inline with the ingredients */
+    padding-top: 250px;
+    padding-left: 40px;
+    margin-top: -100px;
+}
+
+.detail-btn, .favorites-btn {
+    padding: 10px 20px;  /* Adjust as needed */
+    border: none;
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;
+    background-color: #007BFF;  /* Blue color, adjust as needed */
+    color: #FFFFFF;  /* White text color */
+    font-size: 16px;  /* Adjust as needed */
+    transition: 0.3s;  /* Smooth hover transition */
+}
+
+.detail-btn:hover, .favorites-btn:hover {
+    background-color: #0056b3;  /* Darker blue color on hover */
+}

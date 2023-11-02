@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700;9..40,900&family=Manrope:wght@700;800&display=swap');
+
+.header {
+    // background-color: yellow;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    height: 100px;    
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f7ff;
+
+}
+
+.title-header {
+    font-family: 'Manrope', sans-serif; 
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    // background-color: blue;
+}   
+
+.navbar-header {
+    // background-color: aqua;
+    display: flex;
+    flex-direction: row;  /* Change from column to row */
+    justify-content: flex-start;  /* Aligns items to the start (left) of the container */
+    margin-top: 20px;
+}
+
+.navbar-item {
+    margin: 0 30px;  // Increase this value for more spacing
+}
+
+.navbar-item button {
+    background: none; // To remove default button background
+    border: none; // To remove default button border
+    cursor: pointer; // To show hand cursor on hover
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    outline: none; // To remove the default focus outline (use cautiously)
+}
+
+.navbar-item button:hover {
+    // Add any hover styles you want for the buttons, e.g.,
+    text-decoration: underline;
+}
